@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="4 in a row againt AI">
+    <meta name="keywords" content="Connect 4, 4 in a row">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../../CardStyles.css">
+
+    <style>
+
+body
+{
+    text-align: center;
+}
+
+.frame
+{
+    display:inline-block;
+    position:relative;
+    width:500px;
+    height:500px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+
+
+
+.redToken
+{
+    position: absolute;
+    display: inline-block;
+    clip-path: circle(40% at center);
+    user-select: none;
+    -webkit-user-drag: none;
+    background-color: red;
+}
+
+.yellowToken
+{
+    position: absolute;
+    display: inline-block;
+    clip-path: circle(40% at center);
+    user-select: none;
+    -webkit-user-drag: none;
+    background-color: rgb(231, 208, 0);
+}
+
+
+.sliders
+{
+    position:relative;
+    width:20%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 10px;
+}
+
+.slider
+{
+    width:70%;
+    display:inline;
+    float:right;
+}
+
+.sliderLabel
+{
+    float:right;
+}
+
+.sliderRow
+{
+    width:100%;
+    float:left;
+}
+
+
+.frameCell
+{
+    position: absolute;
+    display: inline-block;
+    /*svg background image not working for chrome so using this instead*/
+    -webkit-mask-image: radial-gradient(circle at 50% 50%, transparent 50%, black 51%);
+    background-color: blue;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+/*.frameCell
+{
+    position: absolute;
+    display: inline-block;
+    background-image: url(frame.svg);
+    background-size:50px;
+    background-clip: ;
+    background-position-x:0%;
+    background-position-y:0%;
+    background-repeat:no-repeat;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+}*/
+
+/*.frameCell
+{
+    margin:0px;
+    display:block;
+    background-image: url(frame.svg);
+    float:left;
+    padding:0px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+}*/
+
+
+
+/*plain red token*/
+/*.shinyRedToken
+{
+    position: absolute;
+    display: inline-block;
+    clip-path: circle(40% at center);
+    background-color: red;
+}*/
+
+/*pseudo element given by shiny class: white sheen gradient that travels across token*/
+.shiny::before
+{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transform: skew(-20deg) scaleX(-50%);
+    background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.849), rgba(0,0,0,0));
+    filter:blur(10px);
+    animation: sheen 2s infinite;
+}
+
+.drop
+{
+    animation: drop 0.5s;
+    animation-timing-function: ease-in;
+    /*animation-direction: reverse;*/
+}
+
+
+@keyframes sheen
+{
+0%
+{
+    transform:translateX(-400%) skew(-20deg) scaleX(50%);
+}
+100%
+{
+    transform:translateX(200%) skew(-20deg) scaleX(50%);
+}
+}
+
+/*WIP*/
+@keyframes drop
+{
+0%
+{
+    transform:translateY(-380%) scale(0%);
+}
+40%
+{
+    transform:translateY(-380%) scale(100%);
+}
+/*30%
+{
+    transform:translateY(-340%) scale(100%);
+}*/
+100%
+{
+    transform:translateY(0%) scale(100%);
+} 
+}
+
+
+       
+    </style>
+
+<!-- classes etc -->
+
+
+    <!--<p>Move your mouse to see its position.</p>
+    <p id="screen-log"></p>-->
+    
+    
+<!-- Classes -->
+<script src="Board.js"></script>
+<script src="Game.js"></script>
+<script src="BoardMap.js"></script>
+<script src="Ai.js"></script>
+
+<!-- /Classes -->
+
+<script>
+
+function goToIndex()
+{
+document.getElementById("all").classList.add("shrink");
+setTimeout(function() {
+    document.location='../../Home.html';
+}, 200);
+
+}
+
+</script>
+
+
+</head>
+
+<body onpagehide="document.getElementById('all').classList.remove('shrink'); document.getElementById('all').classList.add('expand');">
+
+<div id="all" class="expand">
+
+
+<div style="display: inline;">
+<img id="homeButton" class="homeButton" src="../../HouseShape.svg" style="text-align:center; float:left; margin:20px;" onclick="goToIndex();"/>
+</div>
+
+<div id="frame" class="frame"></div>
+
+<script src="Init.js"></script>
+<script src="mouse.js"></script>
+
+
+<div class="sliders expand">
+
+    <div class="sliderRow">
+        
+        <input type="range" class="slider" step="1" value="6" min="4" max="20" oninput="game.board.rows = this.value; game.start()">
+        <span class="sliderLabel">Rows:</span>
+    </div>
+
+    <div class="sliderRow">
+        
+        <input type="range" class="slider" step="1" value="7" min="4" max="13" oninput="game.board.columns = this.value; game.start()">
+        <span class="sliderLabel">Columns:</span>
+    </div>
+
+</div>
+
+
+ </div>   
+
+ <script>
+    document.getElementById("all").addEventListener("animationend", function() {
+        document.getElementById("all").classList.remove("expand");
+    });
+    </script>
+
+</body>
+
+</html>

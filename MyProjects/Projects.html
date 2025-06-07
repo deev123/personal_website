@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="David Cain">
+<meta name="keywords" content="David Cain">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="../CardStyles.css">
+</head>
+
+
+
+
+<script> //for shrinking effect when changing page
+
+function goToIndex()
+{
+document.getElementById("all").classList.add("shrink");
+setTimeout(function() {
+    document.location='../Home.html';
+}, 200);
+}
+
+function goTo4InARow()
+{
+document.getElementById("all").classList.add("shrink");
+setTimeout(function() {
+    document.location='4InARow/4InARow.html';
+}, 200);
+}
+
+function goToRootRunner()
+{
+document.getElementById("all").classList.add("shrink");
+setTimeout(function() {
+    document.location='RootRunner/RootRunner.html';
+}, 200);
+}
+
+</script>
+
+<body onpagehide="document.getElementById('all').classList.remove('shrink'); document.getElementById('all').classList.add('expand');">
+
+<div class="scrollReference" style="height: 2100px;"></div>
+
+<div id="all" class="expand">
+    
+
+<div class="card">
+<div class="cardHead">
+<h1>Website</h1>
+</div>
+<h1>This Website</h1>
+<h3>This website was actually a bit of a learning project for me to put my HTML CSS and Javascript into practice. It's all my 
+    own code. You've probably seen 
+    most of it already but take another look around if you wish... Theres a few things I need to add when I get a chance like a navigation header and information popups, so expect some changes soon, as well as some new projects...</h3>
+<button class="button" onclick="goToIndex()">Website</button>
+<div class="cardTail"></div>
+</div>
+
+
+<div class="card">
+<div class="cardHead">
+<h1>4 in a row</h1>
+</div>
+<h1>Play 4 in a row against an AI</h1>
+<h3>This was actually my first HTML Javascript CSS project that I
+     took on with the goal of learning as I went along. The project is a game of
+      4 in a row rendered with CSS elements and animations, so I was forced to confront stylesheets head on. The board is variable in size,
+       and you play against a minimax algorithm I wrote. This was a great opportunity for me 
+       to learn some in depth stuff like pseudo elements and asyncronous functions. There's room for improvement, but
+        try it out...</h3>
+<button class="button" onclick="goTo4InARow()">4 in a Row</button>
+<div class="cardTail"></div>
+</div>
+
+
+
+
+    <div class="card">
+    <div class="cardHead">
+    <h1>Root Runner</h1>
+    </div>
+    <h1>February 2023 Game Jam</h1>
+    <h3>Do you have a green thumb for maths? Or are your maths skills wilting? My solo entry for February 2023's global game jam 'Roots' is a race against time to solve as many square roots as you can.
+        The game jam was a great opportunity to get back into using Unity again. I learnt a new 2D animation technique for sprites and got some good practice for my next game jam. I had fun!</h3>
+    <button class="button" onclick="goToRootRunner()">Root Runner</button>
+    <div class="cardTail"></div>
+    </div>
+
+
+<!--
+<div class="card expand">
+    <div class="backgroundWhiteGradient">
+    <div class="card">
+    <div class="cardHead">
+    <h1>Number Classifier</h1>
+    </div>
+    <h1>Number Classifier Neural Network (WIP)</h1>
+    <h3>I'm working on a browser based number recogniser using Tensorflow.js. Hopefully this project will be finished soon so you can see...</h3>
+    <button class="button" onclick=""></button>
+    <div class="cardTail"></div>
+    </div>
+-->
+
+
+</div>
+
+<script>
+    document.getElementById("all").addEventListener("animationend", function() {
+        document.getElementById("all").classList.remove("expand");
+    });
+    </script>
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>
