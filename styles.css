@@ -1,0 +1,661 @@
+
+@font-face
+{
+    font-family: Roboto;
+    src: url("Roboto/static/Roboto-Regular.ttf");
+}
+
+body
+{
+    
+    font-family: 'arial';
+    font-family: 'Roboto';
+    letter-spacing: 0px;
+    font-weight:lighter;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    overflow-x: hidden;
+    background-image: linear-gradient(180deg,#0B2D34,#21869A);
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /*background-color: #f9f9f9;*/
+}
+
+img
+{
+    font-size: 0px;
+    vertical-align: bottom;
+}
+
+
+/* #region header */
+
+header
+{
+    /* background-color: #f9f9f9; */
+    background-image: linear-gradient(180deg,#0B2D34 40%,#ffffff00 100%);
+    
+    /* background-size: cover; */
+    
+    /* display:inline; */
+    width:100%;
+    position:fixed;
+    top:0px;
+    z-index: 100;
+    width: -webkit-fill-available;
+    height: 100px;
+}
+
+header .header-name
+{
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+/*flex box for the stuff in the header excluding the red line. divided into left and right side*/
+
+header .header-content
+{
+    padding-top:10px;
+    padding-bottom:12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    height:100px;
+    transition: 0.5s;
+}
+
+
+
+
+/*the header links*/
+header .header-right-side
+{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: right;
+}
+
+header .header-right-side a
+{
+    margin:20px;
+}
+
+a
+{
+text-decoration: none;
+color: white;
+}
+
+/*hamburger icon is hidden until header gets too thin*/
+header .hamburger-icon
+{
+    display:flex;
+    height:25px;
+    width:30px;
+    margin-left:20px;
+    /* background-image: url(Hamburger_icon.png); */
+    background-size: cover;
+    display: none;
+    transition: 0.3s;
+    cursor:pointer;
+    /*transform: scaleY(0.9);*/
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .hamburger-icon span
+{
+    display: block;
+    height: 4px;
+    width:100%;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* header .hamburger-icon:hover
+{
+    filter: drop-shadow(0px 0px 3px rgba(255,0,0,0.2));
+    filter:opacity(0.6);
+} */
+
+
+/*for thin version of header*/
+
+header .header-content-thin
+{
+    height:30px;
+}
+
+
+header .hamburger-menu
+{
+    transition:0.4s;
+}
+
+header .hamburger-menu .hamburger-page-links
+{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+    overflow:auto; /*if device screen is too small to fit all of the links it will be scrollable*/
+    
+    transition:0.4s;
+    background-color: rgb(45 45 53);
+
+    height:0px;
+    margin-right:-100px;
+
+    line-height:0px;
+    font-size: 0px;
+    margin-top: -10px;
+}
+
+header .hamburger-page-links::-webkit-scrollbar
+{
+    width: 6px;
+    margin-right:2px;
+}
+header .hamburger-page-links::-webkit-scrollbar-track
+{
+    background-color: transparent;
+}
+header .hamburger-page-links::-webkit-scrollbar-thumb
+{
+    border-radius: 4px;
+    background-color: #e7e7e7;
+}
+
+
+header .hamburger-menu.hamburger-page-links-show .hamburger-page-links
+{
+    height:50%;
+    max-height: calc(100vh - 150px);
+    margin-right:0px;
+    line-height: 40px;
+    font-size: 26px;
+    margin-top: -10px;
+}
+
+header .hamburger-page-links a
+{
+    padding-right: 23px;
+    color: #f9f9f9;
+    display: inline-block;
+    
+}
+header .hamburger-page-links-show a:hover
+{
+    background-color: #f5f5f5;
+    color: #202020;
+    transition: 0.1s;
+    padding-right:30px;
+}
+
+/* #endregion */
+
+
+/* #region profile card */
+
+.center
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-card
+{
+    /* font-size: 10px; */
+    display: flex;
+    padding: 40px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+}
+
+.green-chip
+{
+    background-color: #0B8C34;
+    /* font-size: 10px; */
+    border-radius: 30px;
+    padding:8px;
+    margin:4px;
+    display:inline-block;
+}
+
+.profile-card-picture
+{
+    /* width: 300px;
+    height: 300px;
+    background-size: cover;
+    border-radius: 100%;
+    background-image: url("profile_pic.jpeg");
+    filter: drop-shadow(0px 0px 30px #00ffc35d); */
+    /* height: 100px;
+    width: 100%; */
+    flex: 2;
+    background-size: cover;
+    border-radius: 100%;
+    background-image: url(profile_pic.jpeg);
+    filter: drop-shadow(0px 0px 30px #00ffc35d);
+    /* background-color: blue; */
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+    max-width: 260px;
+
+}
+
+.profile-card-about-info
+{
+    /* width: 700px; */
+    flex: 2;
+}
+
+.profile-card-about-info .chips
+{
+    margin-left: -10px;
+}
+
+.chips
+{
+    /* padding:60px 0px; */
+    overflow:visible;
+    margin: 10px;
+    /* margin:60px 0px; */
+}
+
+.square-button
+{
+    padding:8px;
+    margin:4px;
+    display:inline-block;
+    border: 2px solid #4e992f;
+}
+
+
+.section-title
+{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin:0px 30px;
+}
+
+.section-title span {
+    position: relative;
+    padding: 4px 8px;
+}
+
+
+.section-title::before,
+.section-title::after {
+    /* margin: 10px; */
+    content: "";
+    flex: 1;                 
+    height: 3px;            
+    background: #3DBDD6;    
+}
+
+
+.section-title span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: 100%;            /* matches text width */
+    
+    height: 3px;            
+    background: #3DBDD6;
+}
+
+/* #endregion */
+
+/******* for the footer ***********/
+
+/* #region footer */
+
+.footer
+{
+    color: #949494;
+    background-color: rgb(27, 26, 31);
+    padding-top:10px;
+    padding-bottom: 6px;
+}
+
+/*flex box for the stuff in the header excluding the red line. divided into left and right side*/
+.footer-content
+{
+    padding-left:40px;
+    padding-right:40px;
+    padding-top:20px;
+    padding-bottom:20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content-very-bottom
+{
+    /* padding-left: 190px;
+    padding-top:20px;
+    padding-bottom:20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content:center;
+    column-gap: 300px;
+    flex-wrap: wrap;
+    flex-direction: column; */
+
+    width: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+
+    
+}
+
+.footer h3
+{
+    font-weight:normal;
+    color: #fefefe;
+}
+
+.footer a
+{
+text-decoration: none;
+color: #949494;
+transition:0.3s;
+}
+
+.footer a:hover
+{
+    color:#c4c4c4;
+}
+
+.footer-left-side
+{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-right-side
+{
+    margin-top: 30px;;
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+}
+
+
+.footer-column *
+{
+    margin: 5px;
+    display:block;
+}
+
+.footer-contact-info
+{
+    /* font-size: 18px; */
+}
+
+/* #endregion */
+
+
+
+/**************************/
+
+/* container for all content on the page */
+
+/* everything has a max width of 50% of page unless it has the span-page class */
+.content .central
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-align: center;
+    overflow-x: hidden;
+    /*background-color: #fcfcfc;*/
+}
+
+
+
+/** new stuff **/
+
+.project-card
+{
+    margin: 10px;
+    background-color: #0000004a;
+    background-image: linear-gradient(180deg, #0000004a 0%, #0000001c 50%, #0000004a 100%);
+        /* background-image: linear-gradient(180deg, #134E59 50%, #0D353C 100%); */
+    text-align: center;
+    text-align: center;
+    overflow-x: hidden;
+
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.project-card h1
+{
+    /* font-size: 35px; */
+    margin: 30px;
+}
+
+
+.project-card .project-thumbnail
+{
+    
+    margin: 40px;
+    mask-image: linear-gradient(#00000000 0%, #000000FF 15%, #000000FF 75%, #00000000 100%);
+    overflow: hidden;
+}
+
+.project-card img
+{
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.yellow-text
+{
+    color:#E1B831;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For the red divider line and sheen */
+
+/* normal sheen */
+
+.divider
+{
+    padding:1px;
+    margin: 0px;
+    background-color: #3DBDD6;
+    /*filter: drop-shadow(0px 0px 3px rgba(255,0,0,0.2));*/
+    border:0px;
+    overflow-x: hidden;
+
+}
+
+
+
+
+
+/* images **************/
+
+
+/* fixed image style for parallax effect */
+.fixed-image
+{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.soldering-pic
+{
+    height:300px;
+    background-image: url(istock-544560094.jpg);
+}
+
+
+.header-right-side #header-page-links
+    {
+        display:none;
+    }
+
+    .header-right-side .hamburger-icon
+    {
+        display:flex;
+    }
+
+
+
+
+
+
+/*@media (max-width: 825)*/
+@media (min-width: 51rem)
+{
+
+   
+
+    .header-right-side #header-page-links
+    {
+        display:block;
+    }
+
+    .header-right-side .hamburger-icon
+    {
+        display:none;
+    }
+
+
+
+
+
+    .footer-content
+    {
+        padding-left:40px;
+        padding-right:40px;
+        padding-top:20px;
+        padding-bottom:20px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+
+    .footer-left-side
+    {
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        flex-direction: row;
+    }
+
+    /* .footer .footer-column a
+    {
+        margin-bottom:28px;
+    } */
+
+    .footer-content-very-bottom
+    {
+        /* padding-left: 190px; */
+        /* font-size:15px; */
+        padding-top:20px;
+        padding-bottom:20px;
+        display: flex;
+        align-items: flex-start;
+        justify-content:center;
+        /* column-gap: 300px; */
+
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .footer-logo
+    {
+        height:120px;
+        width:120px;
+        position:relative;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* extra bits*/
+
+/* .divider {
+    padding: 1px;
+    margin: 0px;
+    background: linear-gradient(90deg, #269ab1 10%, #3dbdd6 50%, #269ab1 90%);
+    border: 0px;
+    overflow-x: hidden;
+}
+
+.divider-sheen, .divider-sheen-progress-bar {
+    content: "";
+    height: 20px;
+    width: 70%;
+    background: radial-gradient(50% 50.00% at 50% 50.00%, #ffffff 0%, #3dbdd6 16%, rgba(255, 0, 0, 0.00) 60.29%);
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: -70%;
+    left: 0%;
+    z-index: 1;
+    overflow: initial;
+} */
+
