@@ -19,10 +19,10 @@
   <a class="header-name" href="index.html">David Cain</a>
   <div class="header-right-side">
     <nav id="header-page-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="skills.html">Skills</a>
+    <!-- <a href="index.html">Home</a> -->
+    <!-- <a href="about.html">About</a> -->
+    <a href="#projects">Projects</a>
+    <!-- <a href="skills.html">Skills</a> -->
     <a href="contact.html">Contact</a>
     <a href="cv.html">CV</a>
     </nav>
@@ -52,9 +52,9 @@
 <div style="height:110px; background-color:none;"></div>
 
 
-<div class="content">
 
 <div class="center">
+
 <div class="profile-card">
 
   <div class="profile-card-about-info">
@@ -74,84 +74,217 @@
 </div>
 </div>
 
+
+
+
+
+<section id="projects">
+  
 <h1 class="section-title"><span>Projects</span></h1>
 
-<div class="chips">
-      
-    <a class="green-chip" href="contact.html">Contact</a>
-    <a class="green-chip" href="cv.html">CV</a>
+
+<div class="projects">
+<!-- #region cards -->
+  <div class="project-card" id="card-ov7670">
+    <h1>OV760 Powered Camera And Web Interface</h1>
+
+    <div class="project-thumbnail">
+    <img src="OV7670_project_thumbnail.jpg"/>
+    </div>
+
+    <p>
+      I created a custom PCB in <span class="yellow-text">KiCAD</span>, and 
+      <span class="yellow-text">C Raspberry Pi</span> Firmware for the OV7670 CMOS sensor
+       module. I also created a web interface powered by <span class="yellow-text">JavaScript</span> and <span class="yellow-text">HTML Canvas</span>, and a 
+       custom <span class="yellow-text">Flask</span> serial interface written in <span class="yellow-text">python</span>
+    </p>
+
+    <ul class="chips">
+      <li>RP2040 Pi Pico</li>
+      <li>C</li>
+      <li>HTML</li>
+      <li>KiCAD</li>
+      <li>PCB Design</li>
+      <li>Python</li>
+      <li>Git</li>
+    </ul>
+  
+  </div>
+
+<div class="project-card" id="card-tensorflowjs">
+    <h1>AI Image Fitter</h1>
+
+    <div class="project-thumbnail">
+    <img src="JS_image_fitter_thumbnail.jpg"/>
+    </div>
+
+    <p>
+      How good is a neural network at memorising an image? For this project over-fitting was what we wanted! Using TensorflowJS, JavaScript and HTML canvas the model trains live on a loaded image.
+    </p>
+
+    <ul class="chips">
+      <li>AI</li>
+      <li>TensorflowJS</li>
+      <li>HTML Canvas</li>
+      <li>JavaScript</li>
+    </ul>
+  
+  </div>
+  
+  <div class="project-card" id="card-root-runner">
+    <h1>Root Runner - Game Jam</h1>
+
+    <div class="project-thumbnail">
+    <img src="Root_runner_thumbnail.jpg"/>
+    </div>
+
+    <p>
+      Do You have a green thumb for maths? This cute 
+      little game was made for a game Jam. You play as 
+      a little flower to race against a clock to solve 
+      square roots. Can you guess what the theme was? 
+      The game was made and animated in Unity, art in 
+      Krita and exported as a WebGL project
+    </p>
+
+    <ul class="chips">
+      <li>Unity</li>
+      <li>C#</li>
+      <li>Sprite Sheets</li>
+      <li>2D Rigging</li>
+      <li>Graphic Design</li>
+    </ul>
+  
+  </div>
+
+  <div class="project-card" id="card-hsp">
+    <h1>Prototype Medical Volume Segmentation Tool</h1>
+
+    <div class="project-thumbnail">
+    <img src="HSP_thumbnail.jpg"/>
+    </div>
+
+    <p>
+      A zero footprint web based annotation tool for 3D images. 
+      I created a multiplanar reconstructor and renderer and a 
+      layer based 3D annotation tool. Using HTML canvas to render 
+      and JavaScript for logic it loads a volume and shows planar 
+      slices across different axes allowing a user to highlight 
+      and make notes for a region.
+    </p>
+
+    <ul class="chips">
+      <li>HTML</li>
+      <li>JavaScript</li>
+      <li>CSS</li>
+      <li>HTML Canvas</li>
+      <li>Project Management</li>
+      <li>Usability Testing</li>
+    </ul>
+  
+  </div>
+
+  <div class="project-card" id="card-mnist">
+    <h1>Triple MNIST CNN</h1>
+
+    <div class="project-thumbnail">
+    <img src="Triple_MNIST_thumbnail.jpg"/>
+    </div>
+
+    <p>
+      An exploration of the triple MNIST dataset. Using Tensorflow I trained and 
+      fine-tuned various CNNs to label a three-digit image. I even 
+      attempted to generate synthetic images with a cdcGAN in PyTorch
+    </p>
+
+    <ul class="chips">
+      <li>AI</li>
+      <li>Google Colab</li>
+      <li>Tensorflow</li>
+      <li>PyTorch</li>
+      <li>Regularisation</li>
+      <li>Data Preprocessing</li>
+      <li>Hyperparameter Tuning</li>
+      <li>cdcGAN</li>
+      <li>AI Image Generation</li>
+    </ul>
+  
+  </div>
+  
+  <div class="project-card" id="card-boids">
+    <h1>GPU And CPU Parallel Boid Simulations</h1>
+    
+    <div class="project-thumbnail">
+      <img src="Parallel_boid_sim_thumbnail.jpg"/>
+    </div>
+
+    <p>
+      I implemented a well known flocking simulation into two forms: A Rust 
+      program that uses multithreading to parallelise the simulation, and 
+      A CUDA/C++ solution running on the GPU optimising shared memory for 
+      a performance boost.
+    </p>
+    
+    <ul class="chips">
+      <li>OpenGL</li>
+      <li>CUDA</li>
+      <li>C++</li>
+      <li>Rust</li>
+      <li>Multithreading</li>
+      <li>GPU</li>
+      <li>Shared Memory</li>
+      <li>Memory Tiling</li>
+      <li>Locks</li>
+    </ul>
+
+  </div>
+  
+  <div class="project-card" id="card-minimax">
+    <h1>Minimax 4 In A Row Bot</h1>
+    
+    <div class="project-thumbnail">
+      <img src="Minimax_thumbnail.jpg"/>
+    </div>
+    
+    <p>
+      This is a little 4 in a row game in JavaScript I created where you 
+      play in a variable sized board against a bot. The bot uses the 
+      MiniMax algorithm to find the optimal move.
+    </p>
+    
+    <ul class="chips">
+      <li>HTML</li>
+      <li>JavaScript</li>
+      <li>CSS</li>
+      <li>MiniMax</li>
+    </ul>
+    
+  </div>
+<!-- #endregion -->
+  
 </div>
-
-
-
-
-
-
-
-
-  <div class="project-card">
-    <h1>Ov760 CMOS camera and Web Interface</h1>
-
-    <div class="project-thumbnail">
-    <img src="istock-544560094.jpg"/>
-    </div>
-
-    <p>
-      This paragraph is about the project with <span class="yellow-text">yellow</span> where i want to highlight
-    </p>
-
-    <div class="chips">
-      
-      <a class="green-chip" href="contact.html">Contact</a>
-      <a class="green-chip" href="cv.html">CV</a>
-      <a class="green-chip" href="contact.html">Contact</a>
-      
-    </div>
-  
-  </div>
-
-<div class="project-card">
-    <h1>Ov760 CMOS camera and Web Interface</h1>
-
-    <div class="project-thumbnail">
-    <img src="istock-544560094.jpg"/>
-    </div>
-
-    <p>
-      This paragraph is about the project with <span class="yellow-text">yellow</span> where i want to highlight
-    </p>
-
-    <div class="chips">
-      
-      <a class="green-chip" href="contact.html">Contact</a>
-      <a class="green-chip" href="cv.html">CV</a>
-      <a class="green-chip" href="contact.html">Contact</a>
-      
-    </div>
-  
-  </div>
-
+</section>
 
 
 <!-- 
-
-
-  
-  <div class="span-page banner">
-    <div class="span-page fixed-image fixed-image-man-soldering"></div>
-    </div>
-
-
-  <div class="divider"><div class="divider-sheen"></div></div>
   
 
-  <div class="text-box-white">
+
+<div class="span-page banner">
+  <div class="span-page fixed-image fixed-image-man-soldering"></div>
+</div>
+
+
+<div class="divider"><div class="divider-sheen"></div></div>
+
+
+<div class="text-box-white">
   <h1>Hello World</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
+</div>
 
 
-  <div class="divider"><div class="divider-sheen"></div></div>
+<div class="divider"><div class="divider-sheen"></div></div>
 
 
 
@@ -209,8 +342,23 @@
 
     <div class="footer-left-side">
       <div class="footer-column">
+        <h3>Projects</h3>
+        <nav>
+          <a href="#card-ov7670">OV760 Powered Camera And Web Interface</a>
+          <a href="#card-tensorflowjs">AI Image Fitter</a>
+          <a href="#card-root-runner">Root Runner - Game Jam</a>
+          <a href="#card-hsp">Prototype Medical Volume Segmentation Tool</a>
+          <a href="#card-mnist">Triple MNIST CNN</a>
+          <a href="#card-boids">GPU And CPU Parallel Boid Simulations</a>
+          <a href="#card-minimax">Minimax 4 In A Row Bot</a>
+        
+        </nav>
+      </div>
+      <!-- <div class="footer-column">
         <h3>Title for these links</h3>
         <nav>
+          <a href="index.html">Link</a>
+          <a href="index.html">Link</a>
           <a href="index.html">Link</a>
           <a href="index.html">Link</a>
           <a href="index.html">Link</a>
@@ -225,20 +373,9 @@
           <a href="index.html">Link</a>
           <a href="index.html">Link</a>
           <a href="index.html">Link</a>
-          <a href="index.html">Link</a>
         </nav>
       </div>
-      <div class="footer-column">
-        <h3>Title for these links</h3>
-        <nav>
-          <a href="index.html">Link</a>
-          <a href="index.html">Link</a>
-          <a href="index.html">Link</a>
-          <a href="index.html">Link</a>
-          <a href="index.html">Link</a>
-        </nav>
-      </div>
-    </div>
+    </div> -->
 
     <div class="footer-right-side">
       <nav class="footer-column footer-contact-info">

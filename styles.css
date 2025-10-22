@@ -31,6 +31,12 @@ img
     vertical-align: bottom;
 }
 
+/*To accommodate the fixed header*/
+html
+{
+    scroll-padding-top: 100px;
+}
+
 
 /* #region header */
 
@@ -227,7 +233,7 @@ header .hamburger-page-links-show a:hover
     max-width: 1000px;
 }
 
-.green-chip
+.green-chip, .chips li
 {
     background-color: #0B8C34;
     /* font-size: 10px; */
@@ -295,7 +301,7 @@ header .hamburger-page-links-show a:hover
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin:0px 30px;
+    margin:10px 30px;
 }
 
 .section-title span {
@@ -406,7 +412,7 @@ transition:0.3s;
 
 .footer-right-side
 {
-    margin-top: 30px;;
+    margin-top: 30px;
     display: flex;
     align-items: flex-start;
     text-align: center;
@@ -422,6 +428,7 @@ transition:0.3s;
 .footer-contact-info
 {
     /* font-size: 18px; */
+    text-align: center;
 }
 
 /* #endregion */
@@ -447,8 +454,17 @@ transition:0.3s;
 
 /** new stuff **/
 
+.projects
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .project-card
 {
+    padding: 30px;
     margin: 10px;
     background-color: #0000004a;
     background-image: linear-gradient(180deg, #0000004a 0%, #0000001c 50%, #0000004a 100%);
@@ -460,19 +476,14 @@ transition:0.3s;
     border-radius: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
+    max-width: 400px;
 }
 
-.project-card h1
-{
-    /* font-size: 35px; */
-    margin: 30px;
-}
 
 
 .project-card .project-thumbnail
 {
     
-    margin: 40px;
     mask-image: linear-gradient(#00000000 0%, #000000FF 15%, #000000FF 75%, #00000000 100%);
     overflow: hidden;
 }
@@ -586,7 +597,8 @@ transition:0.3s;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
     }
 
 
@@ -596,6 +608,16 @@ transition:0.3s;
         align-items: flex-start;
         text-align: left;
         flex-direction: row;
+    }
+
+    .footer-right-side
+    {
+        margin-top: 0px;
+    }
+
+    .footer-contact-info
+    {
+        text-align: right;
     }
 
     /* .footer .footer-column a
