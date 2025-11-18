@@ -19,10 +19,7 @@
   <a class="header-name" href="index.html">David Cain</a>
   <div class="header-right-side">
     <nav id="header-page-links">
-    <!-- <a href="index.html">Home</a> -->
-    <!-- <a href="about.html">About</a> -->
     <a href="#projects">Projects</a>
-    <!-- <a href="skills.html">Skills</a> -->
     <a href="contact.html">Contact</a>
     <a href="cv.html">CV</a>
     </nav>
@@ -63,6 +60,9 @@
     <a class="square-button" href="cv.html">CV</a>
     </div>
     <p>This site is a portfolio of some of my projects</p>
+    <p>I love learning new things, and I often use little projects to teach myself something new, whether embedded 
+      programming, AI, or a new language. I hope you find these projects as interesting as I do.
+    </p>
   </div>
   
   <div class="profile-card-picture">
@@ -83,7 +83,7 @@
 <div class="projects">
 <!-- #region cards -->
   <div class="project-card" id="card-ov7670">
-    <h1>OV760 Powered Camera And Web Interface</h1>
+    <h1>OV7670 Powered Camera And Web Interface</h1>
 
     <div class="project-thumbnail">
     <img src="OV7670_project_thumbnail.jpg"/>
@@ -91,7 +91,7 @@
 
     <p>
       I created a custom PCB in <span class="yellow-text">KiCAD</span>, and 
-      <span class="yellow-text">C Raspberry Pi</span> Firmware for the OV7670 CMOS sensor
+      <span class="yellow-text">C</span> <span class="yellow-text">Raspberry Pi</span> Firmware for the OV7670 CMOS sensor
        module. I also created a web interface powered by <span class="yellow-text">JavaScript</span> and <span class="yellow-text">HTML Canvas</span>, and a 
        custom <span class="yellow-text">Flask</span> serial interface written in <span class="yellow-text">python</span>
     </p>
@@ -116,7 +116,11 @@
     </div>
 
     <p>
-      How good is a neural network at memorising an image? For this project over-fitting was what we wanted! Using TensorflowJS, JavaScript and HTML canvas the model trains live on a loaded image.
+      How good is a neural network at memorising an image? For this project over-fitting 
+      was what we wanted! Using <span class="yellow-text">TensorflowJS</span>, 
+      <span class="yellow-text">JavaScript</span> and <span class="yellow-text">HTML Canvas</span> 
+      the model trains live on a loaded image, approximating the function to fit the image in 4
+       dimentional RGBA space.
     </p>
 
     <ul class="chips">
@@ -137,11 +141,11 @@
 
     <p>
       Do You have a green thumb for maths? This cute 
-      little game was made for a game Jam. You play as 
+      little game was made against a clock for a <span class="yellow-text">game Jam</span>. You play as 
       a little flower to race against a clock to solve 
       square roots. Can you guess what the theme was? 
-      The game was made and animated in Unity, art in 
-      Krita and exported as a WebGL project
+      The game was made and animated in <span class="yellow-text">Unity</span>, art in 
+      <span class="yellow-text">Krita</span> and exported as a <span class="yellow-text">Unity WebGL project</span>
     </p>
 
     <ul class="chips">
@@ -164,10 +168,11 @@
     <p>
       A zero footprint web based annotation tool for 3D images. 
       I created a multiplanar reconstructor and renderer and a 
-      layer based 3D annotation tool. Using HTML canvas to render 
-      and JavaScript for logic it loads a volume and shows planar 
+      layer based 3D annotation tool. Using <span class="yellow-text">HTML canvas</span> to render 
+      and <span class="yellow-text">JavaScript</span> for logic it loads a volume and shows planar 
       slices across different axes allowing a user to highlight 
-      and make notes for a region.
+      and make notes for a region. I conducted a <span class="yellow-text">usability study</span> to 
+      evaluate the effectiveness of the interface against project aims.
     </p>
 
     <ul class="chips">
@@ -189,9 +194,9 @@
     </div>
 
     <p>
-      An exploration of the triple MNIST dataset. Using Tensorflow I trained and 
-      fine-tuned various CNNs to label a three-digit image. I even 
-      attempted to generate synthetic images with a cdcGAN in PyTorch
+      An exploration of the <span class="yellow-text">triple MNIST dataset</span>. Using <span class="yellow-text">Tensorflow</span> I trained and 
+      fine-tuned various <span class="yellow-text">CNNs</span> to label a three-digit image. I even 
+      attempted to generate synthetic images with a <span class="yellow-text">cdcGAN</span> in <span class="yellow-text">PyTorch</span>
     </p>
 
     <ul class="chips">
@@ -207,6 +212,33 @@
     </ul>
   
   </div>
+
+  <div class="project-card" id="card-cryptography-api">
+    <h1>RESTful Cryptography and Authentication API</h1>
+    
+    <div class="project-thumbnail">
+      <img src="Cryptography_api.jpg"/>
+    </div>
+    
+    <p>
+      In this uni assignment, I was tasked with creating a series of API endpoints 
+      to manage user <span class="yellow-text">authentication and authorisation</span>, <span class="yellow-text">API keys</span>, <span class="yellow-text">Encrytion</span>, <span class="yellow-text">Hashing</span>, and more. The API 
+      is implemented in <span class="yellow-text">C#</span> in <span class="yellow-text">ASP.NET Web API</span>, with <span class="yellow-text">Entity Framework</span> being used to implement the database.
+      The API implements user creation and <span class="yellow-text">role based authorisation</span>, 
+      <span class="yellow-text">SHA1 and SHA256 hashing and signing</span>, <span class="yellow-text">AES and RSA encryption</span>, and more. 
+      A <span class="yellow-text">C#</span> console client uses the remote API to implement its services locally.
+    </p>
+    
+    <ul class="chips">
+      <li>C#</li>
+      <li>ASP.NET Web API</li>
+      <li>Entity Framework</li>
+      <li>SHA1 & SHA256 Hashing and Signing</li>
+      <li>RSA and AES Encryption</li>
+      <li>Backend Development</li>
+    </ul>
+    
+  </div>
   
   <div class="project-card" id="card-boids">
     <h1>GPU And CPU Parallel Boid Simulations</h1>
@@ -216,10 +248,10 @@
     </div>
 
     <p>
-      I implemented a well known flocking simulation into two forms: A Rust 
-      program that uses multithreading to parallelise the simulation, and 
-      A CUDA/C++ solution running on the GPU optimising shared memory for 
-      a performance boost.
+      I implemented a well known <span class="yellow-text">flocking simulation</span> into two forms: A <span class="yellow-text">Rust</span> 
+      program that uses <span class="yellow-text">multithreading</span> to <span class="yellow-text">parallelise</span> the simulation, and 
+      A <span class="yellow-text">CUDA/C++</span> solution running on the GPU optimising shared memory for 
+      a <span class="yellow-text">performance boost</span>.
     </p>
     
     <ul class="chips">
@@ -244,9 +276,9 @@
     </div>
     
     <p>
-      This is a little 4 in a row game in JavaScript I created where you 
-      play in a variable sized board against a bot. The bot uses the 
-      MiniMax algorithm to find the optimal move.
+      This is a little 4 in a row game in <span class="yellow-text">JavaScript</span> I created where you 
+      play in a <span class="yellow-text">variable sized board</span> against a bot. The bot uses the 
+      <span class="yellow-text">MiniMax algorithm</span> to find the optimal move.
     </p>
     
     <ul class="chips">
@@ -257,6 +289,33 @@
     </ul>
     
   </div>
+
+  <div class="project-card">
+    <h1>This Website!</h1>
+    
+    <div class="project-thumbnail">
+      <img src="This-site.jpg"/>
+    </div>
+    
+    <p>
+      This site is made in plain <span class="yellow-text">HTML</span>, <span class="yellow-text">CSS</span>, and a touch of 
+      <span class="yellow-text">JavaScript</span>. I wanted a little portfolio of some of my favourite projects. 
+      I created a rough design and thumbnails in <span class="yellow-text">Figma</span>, then got to work coding the site, 
+      and hosted it on <span class="yellow-text">GitHub Pages</span> for free!
+    </p>
+    
+    <ul class="chips">
+      <li>HTML</li>
+      <li>JavaScript</li>
+      <li>CSS</li>
+      <li>Figma</li>
+      <li>GitHub Pages</li>
+      <li>DNS</li>
+    </ul>
+    
+  </div>
+
+  
 <!-- #endregion -->
   
 </div>
@@ -341,13 +400,15 @@
       <div class="footer-column">
         <h3>Projects</h3>
         <nav>
-          <a href="#card-ov7670">OV760 Powered Camera And Web Interface</a>
+          <a href="#card-ov7670">OV7670 Powered Camera And Web Interface</a>
           <a href="#card-tensorflowjs">AI Image Fitter</a>
           <a href="#card-root-runner">Root Runner - Game Jam</a>
           <a href="#card-hsp">Prototype Medical Volume Segmentation Tool</a>
           <a href="#card-mnist">Triple MNIST CNN</a>
+          <a href="#card-cryptography-api">RESTful Cryptography and Authentication API</a>
           <a href="#card-boids">GPU And CPU Parallel Boid Simulations</a>
           <a href="#card-minimax">Minimax 4 In A Row Bot</a>
+          <a href="/index.html">This Site</a>
         
         </nav>
       </div>
