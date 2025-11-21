@@ -6,7 +6,6 @@
   <title>David Cain</title>
   <link rel="icon" type="image/x-icon" href="icon.png">
   <link href="styles.css" rel="stylesheet" />
-  <script src="scripts.js"></script>
 </head>
 
 
@@ -53,13 +52,14 @@
 
   <div class="profile-card-about-info">
     <h1>Hello</h1>
-    <p>My name is David. I am a BSc Computer Science Graduate with 1 year of industry experience</p>
+    <p>My name is David. I am a BSc Computer Science Graduate with 1 year of industry experience as a test automation engineer.
+    </p>
     <div class="chips">
       
     <a class="square-button" href="contact.html">Contact</a>
     <a class="square-button" href="cv.html">CV</a>
     </div>
-    <p>This site is a portfolio of some of my projects</p>
+    <p>This site is a portfolio of some of my projects.</p>
     <p>I love learning new things, and I often use little projects to teach myself something new, whether embedded 
       programming, AI, or a new language. I hope you find these projects as interesting as I do.
     </p>
@@ -90,22 +90,29 @@
     </div>
 
     <p>
-      I created a custom PCB in <span class="yellow-text">KiCAD</span>, and 
-      <span class="yellow-text">C</span> <span class="yellow-text">Raspberry Pi</span> Firmware for the OV7670 CMOS sensor
-       module. I also created a web interface powered by <span class="yellow-text">JavaScript</span> and <span class="yellow-text">HTML Canvas</span>, and a 
-       custom <span class="yellow-text">Flask</span> serial interface written in <span class="yellow-text">python</span>
+    I created a custom PCB using <span class="yellow-text">KiCad</span> to interface with an 
+    <span class="yellow-text">OV7670</span> CMOS camera sensor module and an 
+    <span class="yellow-text">RP2040 Raspberry Pi Pico</span>. I developed firmware in 
+    <span class="yellow-text">C</span> for the <span class="yellow-text">Pico</span> to capture image data, working with time-sensitive communication and limited memory. 
+    Image data is streamed via serial to a <span class="yellow-text">Flask</span> server in 
+    <span class="yellow-text">Python</span>, which serves it to a <span class="yellow-text">JavaScript</span>-powered web interface rendering on an <span class="yellow-text">HTML Canvas</span>. 
+    This project is a blend of <span class="yellow-text">embedded electronics</span>, <span class="yellow-text">serial communication</span>, <span class="yellow-text">firmware development</span>, and <span class="yellow-text">full-stack development</span>.
     </p>
 
     <ul class="chips">
       <li>RP2040 Pi Pico</li>
       <li>C</li>
+      <li>CMake</li>
       <li>HTML</li>
-      <li>KiCAD</li>
+      <li>JavaScript</li>
+      <li>HTML Canvas</li>
+      <li>KiCad</li>
       <li>PCB Design</li>
       <li>Python</li>
-      <li>Git</li>
+      <li>Serial Communication</li>
+      <li>Full-Stack Development</li>
     </ul>
-  
+
   </div>
 
 <div class="project-card" id="card-tensorflowjs">
@@ -116,20 +123,22 @@
     </div>
 
     <p>
-      How good is a neural network at memorising an image? For this project over-fitting 
-      was what we wanted! Using <span class="yellow-text">TensorflowJS</span>, 
-      <span class="yellow-text">JavaScript</span> and <span class="yellow-text">HTML Canvas</span> 
-      the model trains live on a loaded image, approximating the function to fit the image in 4
-       dimentional RGBA space.
+    This web application demonstrates how a neural network can memorise an image by overfitting. 
+    Using <span class="yellow-text">TensorFlow.js</span> and <span class="yellow-text">JavaScript</span>, I train a model live in the browser on an image, approximating its RGBA values as a four-dimensional function. 
+    As the model learns, the output updates in real time on an <span class="yellow-text">HTML Canvas</span>, providing immediate visual feedback. 
+    It is a visually interesting example of front-end <span class="yellow-text">machine learning</span> in the browser.
     </p>
 
     <ul class="chips">
-      <li>AI</li>
+      <li>Machine Learning</li>
       <li>TensorflowJS</li>
       <li>HTML Canvas</li>
       <li>JavaScript</li>
+      <li>Web Development</li>
+      <li>Image Processing</li>
+      <li>Real-Time Visualization</li>
     </ul>
-  
+
   </div>
   
   <div class="project-card" id="card-root-runner">
@@ -140,20 +149,19 @@
     </div>
 
     <p>
-      Do You have a green thumb for maths? This cute 
-      little game was made against a clock for a <span class="yellow-text">game Jam</span>. You play as 
-      a little flower to race against a clock to solve 
-      square roots. Can you guess what the theme was? 
-      The game was made and animated in <span class="yellow-text">Unity</span>, art in 
-      <span class="yellow-text">Krita</span> and exported as a <span class="yellow-text">Unity WebGL project</span>
+    Root Runner is cute little <span class="yellow-text">Game Jam</span> entry in which you play as a flower racing against a clock to solve square root problems. 
+    The game was created in <span class="yellow-text">Unity</span> using <span class="yellow-text">C#</span>, with sprites designed in <span class="yellow-text">Krita</span> and animated using Unity’s rigged skeletal animator. 
+    The project was exported to <span class="yellow-text">WebGL</span>, allowing it to run directly in the browser without installation.
     </p>
 
     <ul class="chips">
       <li>Unity</li>
       <li>C#</li>
       <li>Sprite Sheets</li>
-      <li>2D Rigging</li>
+      <li>2D Skeletal Animation</li>
       <li>Graphic Design</li>
+      <li>UX for Games</li>
+      <li>Rapid Prototyping</li>
     </ul>
   
   </div>
@@ -166,13 +174,9 @@
     </div>
 
     <p>
-      A zero footprint web based annotation tool for 3D images. 
-      I created a multiplanar reconstructor and renderer and a 
-      layer based 3D annotation tool. Using <span class="yellow-text">HTML canvas</span> to render 
-      and <span class="yellow-text">JavaScript</span> for logic it loads a volume and shows planar 
-      slices across different axes allowing a user to highlight 
-      and make notes for a region. I conducted a <span class="yellow-text">usability study</span> to 
-      evaluate the effectiveness of the interface against project aims.
+    For a university project I built a zero-footprint, browser-based tool for 3D medical image annotation. Users can load volumetric image data, view planar slices along different axes, and mark regions of interest using an intuitive, layer-based annotation interface. 
+    Rendering done with <span class="yellow-text">HTML Canvas</span>, and user interactions are handled with <span class="yellow-text">JavaScript</span>. 
+    I also conducted a <span class="yellow-text">usability study</span> to evaluate how intuitive and effective the interface was, ensuring a user-centred design.
     </p>
 
     <ul class="chips">
@@ -181,8 +185,11 @@
       <li>CSS</li>
       <li>HTML Canvas</li>
       <li>Project Management</li>
+      <li>Data Visualization</li>
       <li>Usability Testing</li>
+      <li>Git</li>
     </ul>
+    
   
   </div>
 
@@ -194,21 +201,22 @@
     </div>
 
     <p>
-      An exploration of the <span class="yellow-text">triple MNIST dataset</span>. Using <span class="yellow-text">Tensorflow</span> I trained and 
-      fine-tuned various <span class="yellow-text">CNNs</span> to label a three-digit image. I even 
-      attempted to generate synthetic images with a <span class="yellow-text">cdcGAN</span> in <span class="yellow-text">PyTorch</span>
+    This project explores the <span class="yellow-text">triple-MNIST dataset</span>, where the task is to recognise images containing three digits. 
+    I trained and fine-tuned <span class="yellow-text">convolutional neural networks</span> using <span class="yellow-text">TensorFlow</span> to achieve high accuracy and experimented with generative modelling by building a conditional deep-convolutional GAN (<span class="yellow-text">cdcGAN</span>) in <span class="yellow-text">PyTorch</span> to synthesise new images. 
+    The project required proficiency in <span class="yellow-text">data preprocessing</span>, <span class="yellow-text">deep learning architectures</span>, <span class="yellow-text">fine-tuning</span>, and <span class="yellow-text">regularisation</span>.
     </p>
 
     <ul class="chips">
-      <li>AI</li>
       <li>Google Colab</li>
+      <li>Deep Learning</li>
+      <li>GAN</li>
+      <li>CNN</li>
       <li>Tensorflow</li>
       <li>PyTorch</li>
       <li>Regularisation</li>
       <li>Data Preprocessing</li>
       <li>Hyperparameter Tuning</li>
-      <li>cdcGAN</li>
-      <li>AI Image Generation</li>
+      <li>Model Evaluation</li>
     </ul>
   
   </div>
@@ -221,7 +229,7 @@
     </div>
     
     <p>
-      In this uni assignment, I was tasked with creating a series of API endpoints 
+      In this university assignment, I created a series of API endpoints 
       to manage user <span class="yellow-text">authentication and authorisation</span>, <span class="yellow-text">API keys</span>, <span class="yellow-text">Encrytion</span>, <span class="yellow-text">Hashing</span>, and more. The API 
       is implemented in <span class="yellow-text">C#</span> in <span class="yellow-text">ASP.NET Web API</span>, with <span class="yellow-text">Entity Framework</span> being used to implement the database.
       The API implements user creation and <span class="yellow-text">role based authorisation</span>, 
@@ -236,6 +244,7 @@
       <li>SHA1 & SHA256 Hashing and Signing</li>
       <li>RSA and AES Encryption</li>
       <li>Backend Development</li>
+      <li>Client-Server Architecture</li>
     </ul>
     
   </div>
@@ -248,10 +257,8 @@
     </div>
 
     <p>
-      I implemented a well known <span class="yellow-text">flocking simulation</span> into two forms: A <span class="yellow-text">Rust</span> 
-      program that uses <span class="yellow-text">multithreading</span> to <span class="yellow-text">parallelise</span> the simulation, and 
-      A <span class="yellow-text">CUDA/C++</span> solution running on the GPU optimising shared memory for 
-      a <span class="yellow-text">performance boost</span>.
+    I implemented a <span class="yellow-text">flocking simulation</span> using two approaches: a multithreaded <span class="yellow-text">Rust</span> program for CPU parallelism and a <span class="yellow-text">GPU</span> version in <span class="yellow-text">CUDA/C++</span>. 
+    The <span class="yellow-text">Rust</span> implementation scales across CPU cores using <span class="yellow-text">multithreading</span>, while the CUDA version is optimised with <span class="yellow-text">shared memory</span> and <span class="yellow-text">memory tiling</span> to accelerate performance on the GPU.
     </p>
     
     <ul class="chips">
@@ -260,25 +267,27 @@
       <li>C++</li>
       <li>Rust</li>
       <li>Multithreading</li>
-      <li>GPU</li>
+      <li>GPU Programming</li>
       <li>Shared Memory</li>
       <li>Memory Tiling</li>
       <li>Locks</li>
+      <li>Performance Optimisation</li>
+      <li>Simulation</li>
     </ul>
+    
 
   </div>
   
   <div class="project-card" id="card-minimax">
-    <h1>Minimax 4 In A Row Bot</h1>
+    <h1>Minimax 4-in-a-row Bot</h1>
     
     <div class="project-thumbnail">
       <img src="Minimax_thumbnail.jpg"/>
     </div>
-    
+
     <p>
-      This is a little 4 in a row game in <span class="yellow-text">JavaScript</span> I created where you 
-      play in a <span class="yellow-text">variable sized board</span> against a bot. The bot uses the 
-      <span class="yellow-text">MiniMax algorithm</span> to find the optimal move.
+    This is a little 4-in-a-row game in <span class="yellow-text">JavaScript</span> where you play on a variable-sized board against a bot. 
+    The bot uses the <span class="yellow-text">MiniMax algorithm</span> to determine the optimal move.
     </p>
     
     <ul class="chips">
@@ -300,7 +309,7 @@
     <p>
       This site is made in plain <span class="yellow-text">HTML</span>, <span class="yellow-text">CSS</span>, and a touch of 
       <span class="yellow-text">JavaScript</span>. I wanted a little portfolio of some of my favourite projects. 
-      I created a rough design and thumbnails in <span class="yellow-text">Figma</span>, then got to work coding the site, 
+      I created rough layouts and thumbnails in <span class="yellow-text">Figma</span>, then got to work coding the site, 
       and hosted it on <span class="yellow-text">GitHub Pages</span> for free!
     </p>
     
@@ -310,83 +319,20 @@
       <li>CSS</li>
       <li>Figma</li>
       <li>GitHub Pages</li>
+      <li>Responsive Web Design</li>
       <li>DNS</li>
     </ul>
     
   </div>
+
+
+
 
   
 <!-- #endregion -->
   
 </div>
 </section>
-
-
-<!-- 
-  
-
-
-<div class="span-page banner">
-  <div class="span-page fixed-image fixed-image-man-soldering"></div>
-</div>
-
-
-<div class="divider"><div class="divider-sheen"></div></div>
-
-
-<div class="text-box-white">
-  <h1>Hello World</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-
-<div class="divider"><div class="divider-sheen"></div></div>
-
-
-
-
-  <div class="span-page banner">
-    <div class="span-page fixed-image fixed-image-man-soldering"></div>
-   </div>
-
-  <div class="divider"><div class="divider-sheen"></div></div>
-
-  <div class="text-box-white">
-    <h1>Hello World</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  
-  
-    <div class="divider"><div class="divider-sheen"></div></div>
-  
-
-
-
-
-
-
-
-
-  <div class="span-page fixed-image soldering-pic"></div>
-
-  <div class="divider"><div class="divider-sheen"></div></div>
-  <div class="text-box-black">
-    <h1>Hello World</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
-  <div class="divider"><div class="divider-sheen"></div></div>
-
-  
-  <div class="span-page fixed-image soldering-pic-very-zoomed"></div>
-
-
-  <div class="divider"><div class="divider-sheen"></div></div>
-
-</div>
-
- -->
-
-
 
 
 
@@ -437,9 +383,9 @@
 
     <div class="footer-right-side">
       <nav class="footer-column footer-contact-info">
-        <a href="index.html">David Cain</a>
-        <a href="index.html">BSc (Hons) Computer Science</a>
-        <a href="index.html">2025</a>
+        <p>David Cain</p>
+        <p>BSc (Hons) Computer Science<p>
+        <p>2025</p>
       </nav>
     </div>
 
@@ -455,6 +401,7 @@
 
 
 
+<script src="scripts.js"></script>
 </body>
 
 
