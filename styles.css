@@ -421,6 +421,7 @@ transition:0.3s;
 
 .footer-column *
 {
+    min-width: 200px;;
     margin: 5px;
     display:block;
 }
