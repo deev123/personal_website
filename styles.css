@@ -331,6 +331,12 @@ header .hamburger-page-links-show a:hover
     background: #3DBDD6;
 }
 
+.project-card a
+{
+    color: #66abff;
+    text-decoration: underline;
+}
+
 /* #endregion */
 
 /******* for the footer ***********/
