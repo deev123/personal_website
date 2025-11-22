@@ -283,6 +283,7 @@ header .hamburger-page-links-show a:hover
     overflow:visible;
     margin: 10px;
     /* margin:60px 0px; */
+    padding: 0px;
 }
 
 .square-button
@@ -345,6 +346,7 @@ header .hamburger-page-links-show a:hover
 
 .footer
 {
+    margin-top: 20px;
     color: #949494;
     background-color: rgb(27, 26, 31);
     padding-top:10px;
@@ -484,6 +486,8 @@ transition:0.3s;
     margin-top: 20px;
     margin-bottom: 20px;
     max-width: 400px;
+    /* box-shadow: 2px 5px 3px #00000036; */
+    box-shadow: 0px 7px 6px 3px #00000036;
 }
 
 
